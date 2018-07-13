@@ -1,6 +1,15 @@
-# VuexFactory
+# Vuex Module Generator (VMG)
 
-`vuex-module-generator` allows you to create a `vuex` module easly.
+`VMG` allows you to create a `vuex` module easly,
+
+### Supported module types
+
+* Clone
+* Crud
+* Export
+* Import
+* Move
+* Sort
 
 ## Motivation
 
@@ -30,7 +39,7 @@ This module contains `list` state with `isLoading`, `isLoaded`, `data` and `erro
 
 Finally, developer can use these different states of module in different cases. For instance `isLoading` state can be used by a list to show an indicator or `error` can be used to show an error component.
 
-Purpose of `vuex-module-generator` is reducing code lines and making development easy.
+Purpose of `VMG` is reducing code lines and making development easy.
 
 ## Use cases
 
@@ -62,6 +71,7 @@ Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/maste
 
 # Complete example
 
+**Note** : This example can be used other  `VMG` members.
 
 ```javascript
 /* eslint-disable no-param-reassign */
