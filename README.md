@@ -22,9 +22,10 @@ Sure, there must be other module members `type`,`actions` and `mutations`. Check
 
 This module contains `list` state with `isLoading`, `isLoaded`, `data` and `errors` properties. When `fetchCustomer` action is called, these state will be changed according to three action type.
 
-1.`INDEX.REQUEST`, it sets `isLoading` true, this means list has been being fetching.
-2.`INDEX.SUCCESS`, it sets `isLoading` false, `isLoaded` true and data with `payload.data`, this means list has been fetched and there is no problem when it was happening.
-3.`INDEX.FAILURE`, it sets `isLoading` false, `isLoaded` false, `data`: empty array (b/c it is a list), this means there is an error and it was failed.
+  * `INDEX.REQUEST`, it sets `isLoading` true, this means list has been being fetching
+  * `INDEX.SUCCESS`, it sets `isLoading` false, `isLoaded` true and data with `payload.data`, this means list has been fetched and there is no problem when it was happening
+  * `INDEX.FAILURE`, it sets `isLoading` false, `isLoaded` false, `data`: empty array (b/c it is a list), this means there is an error and it was failed
+
 
 
 Finally, developer can use these different states of module in different cases. For instance `isLoading` state can be used by a list to show an indicator or `error` can be used to show an error component.
