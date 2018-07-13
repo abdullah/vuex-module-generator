@@ -103,3 +103,8 @@ export default {
   }
 };
 ```
+
+
+Credit
+
+Thanks [Altay Aydemir](https://github.com/altayaydemir), he was my previous developer which wrote this factory for redux, I have implemented for vuex. That's all :)
