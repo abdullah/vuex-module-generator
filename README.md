@@ -45,9 +45,9 @@ Purpose of `VMG` is reducing code lines and making development easy.
 
 ## Use cases
 
-If you have a large application which contains **CRUD** actions in each page/module/component.
-If you want to control **async** states.
-If you want to set a rule which limits to do **CRUD** actions.
+* If you have a large application which contains **CRUD** actions in each page/module/component.
+* If you want to control **async** states.
+* If you want to set a rule which limits to do **CRUD** actions.
 
 
 ## Usage
