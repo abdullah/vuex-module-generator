@@ -2,6 +2,8 @@
 
 `VMG` allows you to create a `vuex` module easly,
 
+See [All examples](https://github.com/Vispera/vuex-module-generator/blob/master/examples)
+
 ### Supported module types
 
 * Clone
@@ -49,7 +51,6 @@ If you want to set a rule which limits to do **CRUD** actions.
 
 
 ## Usage
-
 
 Import generator members.
 
