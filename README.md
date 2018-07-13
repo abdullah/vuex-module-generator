@@ -2,26 +2,25 @@
 
 `vuex-module-generator` allows you to create a `vuex` module easly.
 
-### Motivation
+## Motivation
 
 Most of web applications contains CRUD actions. Vuex or other state management libraries like `redux` implement `stores` which handle CRUD actions.
 Acording to some store patterns each module must contain `isLoading`, `isLoaded`, `data` and `errors` properties in own state therefore a module's state can be implemented like this;
 
-```
+```javascript
 const customerState = {
   list: {
     isLoading: false,
     isLoaded: false,
     data: [],
     errors: {}
-  },
-  ....
+  }
 };
 ```
 
-Sure, there must be other module members `type`,`actions` and `mutations`. Check completed vuex module acording to module pattern.
+Sure, there must be other module members `type`,`actions` and `mutations`. Check completed [ vuex module](https://github.com/Vispera/vuex-module-generator/blob/master/docs/example-module.js) according to module pattern.
 
-This module contains `list` state with `isLoading`, `isLoaded`, `data` and `errors` properties. When `fetchCustomer` action calls,these state will be changed acording to three action type.
+This module contains `list` state with `isLoading`, `isLoaded`, `data` and `errors` properties. When `fetchCustomer` action is called, these state will be changed according to three action type.
 
 1.`INDEX.REQUEST`, it sets `isLoading` true, this means list has been being fetching.
 2.`INDEX.SUCCESS`, it sets `isLoading` false, `isLoaded` true and data with `payload.data`, this means list has been fetched and there is no problem when it was happening.
@@ -48,18 +47,22 @@ Import generator members.
 import { createCrudActions, createCrudActionTypes, createCrudMutation, createCrudState } from 'vuex-module-generator';
 ```
 
-`createCrudState` return an object which contains `list`, `active`, `creating`, `updating`, `destroying` properties.
-These properties contains some sub properties. Check [CRUD state](https://github.com/Vispera/vuex-module-generator/blob/master/src/state/crud.js)
+**`createCrudState`** returns an object which contains `list`, `active`, `creating`, `updating`, `destroying` properties.
+These properties contains some sub properties. Check [CRUD state](https://github.com/Vispera/vuex-module-generator/blob/master/src/state/crud.js) .
 
-`createCrudActions` returns CRUD methods to manage `index`, `show`, `create` etc. resource.
-Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/master/src/action/crud.js)
+**`createCrudActions`** returns CRUD methods to manage `index`, `show`, `create` etc. resource.
+Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/master/src/action/crud.js) .
 
 
-`createCrudActionTypes` returns action types which will be used by `createCrudActions`.
-`createCrudMutation` return functions which handle `CRUD` state mutations.
-Check Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/master/src/mutations/crud.js)
+**`createCrudActionTypes`** returns action types which will be used by `createCrudActions`.
 
-```
+**`createCrudMutation`** return functions which handle `CRUD` state mutations. Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/master/src/mutations/crud.js) .
+
+
+# Complete example
+
+
+```javascript
 /* eslint-disable no-param-reassign */
 import { createCrudActions, createCrudActionTypes, createCrudMutation, createCrudState } from 'vuex-module-generator';
 
@@ -88,6 +91,3 @@ export default {
   }
 };
 ```
-
-
-
