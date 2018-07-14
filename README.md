@@ -1,6 +1,6 @@
 # Vuex Module Generator (VMG)
 
-`VMG` allows you to create a `vuex` module easly,
+`VMG` allows you to create a `vuex` module easily.
 
 See [All examples](https://github.com/abdullah/vuex-module-generator/blob/master/examples)
 
