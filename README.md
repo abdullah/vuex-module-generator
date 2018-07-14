@@ -1,8 +1,8 @@
 # Vuex Module Generator (VMG)
 
-`VMG` allows you to create a `vuex` module easly,
+`VMG` allows you to create a `vuex` module easily.
 
-See [All examples](https://github.com/Vispera/vuex-module-generator/blob/master/examples)
+See [All examples](https://github.com/abdullah/vuex-module-generator/blob/master/examples)
 
 ### Supported module types
 
@@ -29,7 +29,7 @@ const customerState = {
 };
 ```
 
-Sure, there must be other module members `type`,`actions` and `mutations`. Check completed [ vuex module](https://github.com/Vispera/vuex-module-generator/blob/master/docs/example-module.js) according to module pattern.
+Sure, there must be other module members `type`,`actions` and `mutations`. Check completed [ vuex module](https://github.com/abdullah/vuex-module-generator/blob/master/docs/example-module.js) according to module pattern.
 
 This module contains `list` state with `isLoading`, `isLoaded`, `data` and `errors` properties. When `fetchCustomer` action is called, these state will be changed according to three action type.
 
