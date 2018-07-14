@@ -1,6 +1,6 @@
 {
   "name": "vuex-module-generator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/vue-module-factory.min.js",
   "license": "MIT",
   "scripts": {
