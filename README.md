@@ -2,7 +2,9 @@
 
 `VMG` allows you to create a `vuex` module easily.
 
-See [All examples](https://github.com/abdullah/vuex-module-generator/blob/master/example-vmg-modules)
+See [All implementations](https://github.com/abdullah/vuex-module-generator/blob/master/example-vmg-modules) . 
+
+See [Customer Example](https://abdullah.github.io/vuex-module-generator/) .  
 
 ### Supported module types
 
