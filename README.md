@@ -2,7 +2,7 @@
 
 `VMG` allows you to create a `vuex` module easily.
 
-See [All examples](https://github.com/abdullah/vuex-module-generator/blob/master/examples)
+See [All examples](https://github.com/abdullah/vuex-module-generator/blob/master/example-vmg-modules)
 
 ### Supported module types
 
@@ -29,7 +29,7 @@ const customerState = {
 };
 ```
 
-Sure, there must be other module members `type`,`actions` and `mutations`. Check completed [ vuex module](https://github.com/abdullah/vuex-module-generator/blob/master/docs/example-module.js) according to module pattern.
+Sure, there must be other module members `type`,`actions` and `mutations`. Check completed [ vuex module](https://github.com/abdullah/vuex-module-generator/blob/master/example-module-patterns/example-module.js) according to module pattern.
 
 This module contains `list` state with `isLoading`, `isLoaded`, `data` and `errors` properties. When `fetchCustomer` action is called, these state will be changed according to three action type.
 
@@ -67,7 +67,7 @@ Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/maste
 
 **`createCrudActionTypes`** returns action types which will be used by `createCrudActions`.
 
-**`createCrudMutation`** return functions which handle `CRUD` state mutations. Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/master/src/mutations/crud.js) .
+**`createCrudMutation`** return functions which handle `CRUD` state mutations. Check [CRUD mutations](https://github.com/Vispera/vuex-module-generator/blob/master/src/mutations/crud.js) .
 
 
 # Complete example
