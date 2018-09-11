@@ -3,6 +3,7 @@ export default function createCloneState() {
     cloning: {
       id: '',
       isLoading: false,
+      hasError: false,
       data: {},
       errors: {}
     }

@@ -5,8 +5,9 @@ function createSortMutation(ACTION_TYPES) {
     [ACTION_TYPES.SORT.REQUEST](state, payload) {
       state.sorting = {
         ...state.sorting,
-        sortData: payload.sortData,
-        isLoading: true
+        sortData: payload.sortData || {},
+        isLoading: true,
+        hasError: false,
       };
     },
 
@@ -14,7 +15,8 @@ function createSortMutation(ACTION_TYPES) {
       state.sorting = {
         ...state.sorting,
         isLoading: false,
-        data: payload.data,
+        hasError: false,
+        data: payload.data || {},
         errors: {}
       };
     },
@@ -23,6 +25,7 @@ function createSortMutation(ACTION_TYPES) {
       state.sorting = {
         ...state.sorting,
         isLoading: false,
+        hasError: true,
         errors: payload.error
       };
     }

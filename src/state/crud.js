@@ -2,6 +2,7 @@ export default function createCrudState(extraState = {}) {
   return {
     list: {
       isLoading: false,
+      hasError: false,
       isLoaded: false,
       meta: {},
       data: [],
@@ -10,6 +11,7 @@ export default function createCrudState(extraState = {}) {
 
     active: {
       isLoading: false,
+      hasError: false,
       isLoaded: false,
       data: {},
       meta: {},
@@ -18,6 +20,7 @@ export default function createCrudState(extraState = {}) {
 
     creating: {
       isLoading: false,
+      hasError: false,
       formData: {},
       data: {},
       errors: {}
@@ -25,6 +28,7 @@ export default function createCrudState(extraState = {}) {
 
     updating: {
       isLoading: false,
+      hasError: false,
       id: '',
       formData: {},
       data: {},
@@ -33,6 +37,7 @@ export default function createCrudState(extraState = {}) {
 
     destroying: {
       isLoading: false,
+      hasError: false,
       data: {},
       errors: {}
     },

@@ -15,30 +15,25 @@ function createCrudMutation(ACTION_TYPES) {
     },
     // INDEX
     [ACTION_TYPES.INDEX.REQUEST](state) {
-      state.list = {
-        ...state.list,
-        isLoading: true,
-        errors: {}
-      };
+      state.list.isLoading = true;
+      state.list.hasError = false;
+      state.list.errors = {};
     },
     [ACTION_TYPES.INDEX.SUCCESS](state, payload) {
-      state.list = {
-        ...state.list,
-        isLoading: false,
-        isLoaded: true,
-        data: payload.data,
-        meta: payload.meta,
-        errors: {}
-      };
+      state.list.isLoading = false;
+      state.list.isLoaded = true;
+      state.list.hasError = false;
+      state.list.data = payload.data;
+      state.list.meta = payload.meta;
+      state.list.errors = {};
     },
     [ACTION_TYPES.INDEX.FAILURE](state, payload) {
-      state.list = {
-        isLoading: false,
-        isLoaded: false,
-        data: [],
-        meta: {},
-        errors: payload.error
-      };
+      state.list.isLoading = false;
+      state.list.isLoaded = false;
+      state.list.hasError = true;
+      state.list.data = [];
+      state.list.meta = {};
+      state.list.errors = payload.error;
     },
 
     // SHOW
@@ -46,6 +41,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.active = {
         ...state.active,
         isLoading: true,
+        hasError: false,
         errors: {}
       };
     },
@@ -53,6 +49,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.active = {
         ...state.active,
         isLoading: false,
+        hasError: false,
         isLoaded: true,
         data: payload.data,
         meta: payload.meta,
@@ -63,6 +60,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.active = {
         ...state.active,
         isLoading: false,
+        hasError: true,
         isLoaded: true,
         errors: payload.error
       };
@@ -73,6 +71,7 @@ function createCrudMutation(ACTION_TYPES) {
         ...state.creating,
         formData: payload.formData,
         isLoading: true,
+        hasError: false,
         errors: {}
       };
     },
@@ -81,6 +80,7 @@ function createCrudMutation(ACTION_TYPES) {
         ...state.creating,
         data: payload.data,
         isLoading: false,
+        hasError: false,
         errors: {}
       };
     },
@@ -88,6 +88,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.creating = {
         ...state.creating,
         isLoading: false,
+        hasError: true,
         isLoaded: true,
         errors: payload.error
       };
@@ -99,12 +100,14 @@ function createCrudMutation(ACTION_TYPES) {
         id: payload.id,
         formData: payload.formData,
         isLoading: true,
+        hasError: false,
         errors: {}
       };
     },
     [ACTION_TYPES.UPDATE.SUCCESS](state, payload) {
       state.active = {
         isLoading: false,
+        hasError: false,
         isLoaded: true,
         data: payload.data,
         errors: {}
@@ -113,6 +116,7 @@ function createCrudMutation(ACTION_TYPES) {
         ...state.updating,
         data: payload.data,
         isLoading: false,
+        hasError: false,
         errors: {}
       };
     },
@@ -120,6 +124,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.updating = {
         ...state.updating,
         isLoading: false,
+        hasError: true,
         errors: payload.error
       };
     },
@@ -129,6 +134,7 @@ function createCrudMutation(ACTION_TYPES) {
         ...state.destroying,
         data: payload.data,
         isLoading: true,
+        hasError: false,
         errors: {}
       };
     },
@@ -140,6 +146,7 @@ function createCrudMutation(ACTION_TYPES) {
       };
       state.destroying = {
         isLoading: false,
+        hasError: false,
         data: payload.data,
         errors: {}
       };
@@ -148,6 +155,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.destroying = {
         ...state.destroying,
         isLoading: false,
+        hasError: true,
         errors: payload.error
       };
     },
@@ -155,6 +163,7 @@ function createCrudMutation(ACTION_TYPES) {
     [ACTION_TYPES.ACTIVE.SELECT](state, payload) {
       state.active = {
         isLoading: false,
+        hasError: false,
         isLoaded: true,
         data: state.list.data
           .find(item => parseInt(item.id, 10) === parseInt(payload.id, 10)) || {},
@@ -165,6 +174,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.active = {
         isLoading: false,
         isLoaded: true,
+        hasError: false,
         data: payload.data,
         errors: {}
       };
@@ -173,6 +183,7 @@ function createCrudMutation(ACTION_TYPES) {
       state.active = {
         isLoading: false,
         isLoaded: false,
+        hasError: false,
         data: {},
         errors: {}
       };

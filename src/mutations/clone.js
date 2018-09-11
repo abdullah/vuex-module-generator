@@ -6,6 +6,7 @@ function createCloneMutation(ACTION_TYPES) {
         id: payload.id,
         data: payload.data,
         isLoading: true,
+        hasError: false,
         errors: {}
       };
     },
@@ -14,6 +15,7 @@ function createCloneMutation(ACTION_TYPES) {
       state.cloning = {
         ...state.cloning,
         isLoading: false,
+        hasError: false,
         data: payload.data,
         errors: {}
       };
@@ -23,6 +25,7 @@ function createCloneMutation(ACTION_TYPES) {
       state.cloning = {
         ...state.cloning,
         isLoading: false,
+        hasError: true,
         errors: payload.error
       };
     }

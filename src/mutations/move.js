@@ -5,7 +5,8 @@ function createMoveMutation(ACTION_TYPES) {
       state.moving = {
         ...state.moving,
         moveData: payload.moveData,
-        isLoading: true
+        isLoading: true,
+        hasError: false,
       };
     },
 
@@ -13,6 +14,7 @@ function createMoveMutation(ACTION_TYPES) {
       state.moving = {
         ...state.moving,
         isLoading: false,
+        hasError: false,
         data: payload.data,
         errors: {}
       };
@@ -22,6 +24,7 @@ function createMoveMutation(ACTION_TYPES) {
       state.moving = {
         ...state.moving,
         isLoading: false,
+        hasError: true,
         errors: payload.error
       };
     }

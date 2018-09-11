@@ -6,7 +6,8 @@ function createImportMutation(ACTION_TYPES) {
         data: {},
         exportData: payload.exportData,
         errors: {},
-        isLoading: true
+        isLoading: true,
+        hasError: false,
       };
     },
 
@@ -15,6 +16,7 @@ function createImportMutation(ACTION_TYPES) {
         ...state.exporting,
         data: payload.data,
         isLoading: false,
+        hasError: false,
         errors: {}
       };
     },
@@ -23,6 +25,7 @@ function createImportMutation(ACTION_TYPES) {
       state.exporting = {
         ...state.exporting,
         isLoading: false,
+        hasError: true,
         errors: payload.error
       };
     }
