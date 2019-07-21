@@ -1,6 +1,6 @@
 {
   "name": "vuex-module-generator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/vue-module-factory.min.js",
   "license": "MIT",
   "scripts": {
@@ -15,7 +15,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "jest": "^23.4.0",
-    "webpack": "^4.16.0",
-    "webpack-cli": "^3.0.8"
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
   }
 }
