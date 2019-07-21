@@ -1,9 +1,3 @@
-/**
- * @author Abdullah MARA
- * Bu sayfa Vuex modullerinin fabrikalaridir.
- * CRUD ve CLONE, SORT gibi aksiyonlari yonetir.
- */
-
 // CRUD Factories
 export { default as createCrudActions } from './action/crud';
 export { default as createCrudActionTypes } from './type/crud';

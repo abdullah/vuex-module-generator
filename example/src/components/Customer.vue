@@ -5,8 +5,12 @@
       <small>Click a button to fetch customer list or to see other cases</small>
     </p>
     <button @click="onClick">{{ isLoading ? 'Loading...': 'Fetch Customers' }}</button> <br>
-    <button @click="cleanAndFetch">{{ isLoading ? 'Loading...': 'Clean & Fetch Customers' }}</button> <br>
-    <button @click="showErrorCase">{{ isLoading ? 'Loading...': 'Fetch Customers & Show error case' }}</button>
+    <button @click="cleanAndFetch">
+      {{ isLoading ? 'Loading...': 'Clean & Fetch Customers' }}
+      </button> <br>
+    <button @click="showErrorCase">
+      {{ isLoading ? 'Loading...': 'Fetch Customers & Show error case' }}
+     </button>
     <p v-if="hasError">{{ Customer.list.errors.message }}</p>
     <ul v-if="isLoaded">
       <li v-for="customer in customerList" :key="customer.id">{{ customer.first_name }}</li>
@@ -52,10 +56,10 @@ export default {
 </script>
 
 <style>
-  button {
-    padding: 7px 10px;
-    background: white;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
-  }
+button {
+  padding: 7px 10px;
+  background: white;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
 </style>

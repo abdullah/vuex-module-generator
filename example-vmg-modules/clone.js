@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 export { cloneResource } from './api';
 
 // Helpers
@@ -27,7 +26,6 @@ export default {
   state: cloneState,
   mutations,
   actions: {
-    // Fetch all resources
     async cloneResource({ commit }) {
       commit(actions.clone.request());
       try {

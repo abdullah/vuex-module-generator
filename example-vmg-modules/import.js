@@ -1,6 +1,4 @@
-/* eslint-disable no-param-reassign */
 import { importResource } from './api';
-
 // Helpers
 import {
   createImportActions,

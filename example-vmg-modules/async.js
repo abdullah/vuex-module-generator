@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-
 import { createAction, createAsyncActionTypes } from 'vuex-module-generator';
 import { fetchRoles } from '../api';
 
@@ -7,7 +5,7 @@ export const types = {
   ROLE: createAsyncActionTypes('ROLE', 'INDEX')
 };
 
-export const RoleState = () => ({
+export const roleState = () => ({
   isLoading: false,
   isLoaded: false,
   data: {},
@@ -36,7 +34,7 @@ export const mutations = {
 };
 
 export default {
-  state: RoleState,
+  state: roleState,
   mutations,
   actions: {
     async fetchRoles({ commit }) {

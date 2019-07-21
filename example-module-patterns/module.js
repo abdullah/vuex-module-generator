@@ -1,5 +1,9 @@
-/* eslint-disable no-param-reassign */
-import { createCrudActions, createCrudActionTypes, createCrudMutation, createCrudState } from 'vuex-module-generator';
+import {
+  createCrudActions,
+  createCrudActionTypes,
+  createCrudMutation,
+  createCrudState
+} from 'vuex-module-generator';
 
 export const types = {
   ...createCrudActionTypes('MODULE_NAME')
@@ -15,11 +19,13 @@ export default {
       commit(actions.index.request());
       try {
         const res = await asyncSomeResourceAction();
-        const { data, meta } = res.data;
+        const { data } = res.data;
         commit(actions.index.success({ data }));
-        return { data, meta };
+
+        return Promise.resolve(res.data);
       } catch (error) {
         commit(actions.index.failure(error));
+
         return Promise.reject(error);
       }
     }

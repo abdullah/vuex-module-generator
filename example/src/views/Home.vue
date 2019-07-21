@@ -14,7 +14,7 @@ export default {
   name: 'home',
   components: {
     Customer,
-    ModuleDetail
+    ModuleDetail,
   },
 };
 </script>

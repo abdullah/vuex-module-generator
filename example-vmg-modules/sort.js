@@ -1,6 +1,4 @@
-/* eslint-disable no-param-reassign */
 export { sortResource } from './api';
-
 // Helpers
 import {
   createSortActions,

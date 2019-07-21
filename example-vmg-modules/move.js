@@ -1,6 +1,4 @@
-/* eslint-disable no-param-reassign */
 export { moveResource } from './api';
-
 // Helpers
 import {
   createMoveActions,

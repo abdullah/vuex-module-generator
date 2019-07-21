@@ -1,5 +1,10 @@
-/* eslint-disable no-param-reassign */
-import { indexResource, updateResource, createResource, destoryResource, showResource } from './api';
+import {
+  indexResource,
+  updateResource,
+  createResource,
+  destoryResource,
+  showResource
+} from './api';
 
 // Helpers
 import {
@@ -25,7 +30,6 @@ export const actions = createCrudActions(types);
 
 export default {
   state: resourceState,
-
   mutations,
   actions: {
     // Clean List

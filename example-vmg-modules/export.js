@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 export { exportResource } from './api';
 
 // Helpers
