@@ -2,9 +2,9 @@
 
 `VMG` allows you to create a `vuex` module easily.
 
-See [All implementations](https://github.com/abdullah/vuex-module-generator/blob/master/example-vmg-modules) . 
+See [All implementations](https://github.com/abdullah/vuex-module-generator/blob/master/example-vmg-modules). 
 
-See [Customer Example](https://abdullah.github.io/vuex-module-generator/) .  
+See [Customer Example](https://abdullah.github.io/vuex-module-generator/).  
 
 ### Supported module types
 
@@ -17,8 +17,8 @@ See [Customer Example](https://abdullah.github.io/vuex-module-generator/) .
 
 ## Motivation
 
-Most of web applications contains CRUD actions. Vuex or other state management libraries like `redux` implement `stores` which handle CRUD actions.
-Acording to some store patterns each module must contain `isLoading`, `isLoaded`, `data` and `errors` properties in own state therefore a module's state can be implemented like this;
+Most of the web applications contain CRUD actions. Vuex or other state management libraries like `redux` implement `stores` which handle CRUD actions.
+According to some store patterns each module must contain `isLoading`, `isLoaded`, `data` and `errors` properties in own state, therefore, a module's state can be implemented like this;
 
 ```javascript
 const customerState = {
@@ -31,9 +31,9 @@ const customerState = {
 };
 ```
 
-Sure, there must be other module members `type`,`actions` and `mutations`. Check completed [ vuex module](https://github.com/abdullah/vuex-module-generator/blob/master/example-module-patterns/example-module.js) according to module pattern.
+Sure, there must be other module members `type`, `actions` and `mutations`. Check completed [ vuex module](https://github.com/abdullah/vuex-module-generator/blob/master/example-module-patterns/example-module.js) according to module pattern.
 
-This module contains `list` state with `isLoading`, `isLoaded`, `data` and `errors` properties. When `fetchCustomer` action is called, these state will be changed according to three action type.
+This module contains `list` state with `isLoading`, `isLoaded`, `data` and `errors` properties. When `fetchCustomer` action is called, these states will be changed according to three action types.
 
   * `INDEX.REQUEST`, it sets `isLoading` true, this means list has been being fetching
   * `INDEX.SUCCESS`, it sets `isLoading` false, `isLoaded` true and data with `payload.data`, this means list has been fetched and there is no problem when it was happening
@@ -41,9 +41,9 @@ This module contains `list` state with `isLoading`, `isLoaded`, `data` and `erro
 
 
 
-Finally, developer can use these different states of module in different cases. For instance `isLoading` state can be used by a list to show an indicator or `error` can be used to show an error component.
+Finally, the developer can use these different states of the module in different cases. For instance, `isLoading` state can be used by a list to show an indicator or `error` that can be used to show an error component.
 
-Purpose of `VMG` is reducing code lines and making development easy.
+The purpose of `VMG` is reducing code lines and making development easy.
 
 ## Use cases
 
@@ -61,7 +61,7 @@ import { createCrudActions, createCrudActionTypes, createCrudMutation, createCru
 ```
 
 **`createCrudState`** returns an object which contains `list`, `active`, `creating`, `updating`, `destroying` properties.
-These properties contains some sub properties. Check [CRUD state](https://github.com/Vispera/vuex-module-generator/blob/master/src/state/crud.js) .
+These properties contain some sub-properties. Check [CRUD state](https://github.com/Vispera/vuex-module-generator/blob/master/src/state/crud.js) .
 
 **`createCrudActions`** returns CRUD methods to manage `index`, `show`, `create` etc. resource.
 Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/master/src/action/crud.js) .
@@ -74,7 +74,7 @@ Check [CRUD actions](https://github.com/Vispera/vuex-module-generator/blob/maste
 
 # Complete example
 
-**Note** : This example can be used other  `VMG` members.
+**Note**: This example can be used for other  `VMG` members.
 
 ```javascript
 /* eslint-disable no-param-reassign */
