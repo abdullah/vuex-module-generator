@@ -61,10 +61,10 @@ export default {
       }
     },
     // Update a resource
-    async updateResource({ commit }) {
-      commit(actions.update.request());
+    async updateResource({ commit }, payload) {
+      commit(actions.update.request({payload.id, payload.data}));
       try {
-        const res = await updateResource();
+        const res = await updateResource(payload.id, payload.data);
         commit(actions.update.success({ data: res.data, meta: res.meta }));
         return res;
       } catch (error) {
